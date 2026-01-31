@@ -30,10 +30,10 @@ response_t timer_set_clkdiv(timer_clkdiv_t clkdiv) {
 	return OK;
 }
 
-response_t timer_autoload(uint32_t bool) {
+response_t timer_autoload(uint32_t false_true) {
 	uint32_t frc1_ctrl = READ_FROM_REG(FRC1_CTRL);
 	frc1_ctrl = frc1_ctrl & ~(1UL << 6);
-	if (bool) {
+	if (false_true) {
 		frc1_ctrl = frc1_ctrl | (1UL << 6);
 	}
 	WRITE_TO_REG(FRC1_CTRL, frc1_ctrl);
@@ -59,9 +59,9 @@ response_t timer_set_int_type(timer_int_type_t int_type) {
 	return OK;
 }
 
-response_t timer_enable(uint32_t bool) {
+response_t timer_enable(uint32_t false_true) {
 	uint32_t en = (uint32_t)(1 << 7);
-	if (bool) {
+	if (false_true) {
 		WRITE_TO_REG(FRC1_CTRL, READ_FROM_REG(FRC1_CTRL) | en);
 	} else {
 		en = (uint32_t)~en;

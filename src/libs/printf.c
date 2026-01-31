@@ -52,7 +52,7 @@ static void write_hex(int num) {
 }
 
 
-void printf(const char *str, ...) {
+void uart_printf(const char *str, ...) {
 	uint32_t introducer = 0;
 	va_list args;
 

@@ -44,11 +44,11 @@ response_t timer_init(timer_init_t t_init);
 response_t timer_set_clkdiv(timer_clkdiv_t clkdiv);
 
 /* @breif Enable/Disable Autoload feature in Timer1.
- * @param uint32_t bool
+ * @param uint32_t false_true
  * @return
  *      - response_t OK = 1, FAILED = 0
  */
-response_t timer_autoload(uint32_t bool);
+response_t timer_autoload(uint32_t false_true);
 
 /* @breif Load Timer1.
  * @param uint32_t value
@@ -65,11 +65,11 @@ response_t timer_load(uint32_t value);
 response_t timer_set_int_type(timer_int_type_t int_type);
 
 /* @breif Enable/Disable Timer1.
- * @param uint32_t bool
+ * @param uint32_t false_true
  * @return
  *      - response_t OK = 1, FAILED = 0
  */
-response_t timer_enable(uint32_t bool);
+response_t timer_enable(uint32_t false_true);
 
 /* @breif Clear Timer1 Interrupt.
  * @param void
