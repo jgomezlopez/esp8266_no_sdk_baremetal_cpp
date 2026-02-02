@@ -68,7 +68,7 @@ The average 2476 mWh (6h LED in red, 6h LED off and 12h switch enabled waiting t
 The energy consumption of each example running in a ESP-8266 board for 12h is shown in the following table:
  
 | Folder | GCC version | Virtual methods | Concepts | Deduced this | Modules | mWh (12h hardware consumption) | mWh (12h software consumption) |
-|------------------|------------|
+|--------|-------------|-----------------|----------|--------------|---------|--------------------------------|--------------------------------|
 |cpp_17|8.4|✅|❌|❌|❌|2704|226|
 |cpp_17|15.2|✅|❌|❌|❌|2702|224|
 |cpp_20|15.2|❌|✅|❌|❌|2600|122|
