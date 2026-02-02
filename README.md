@@ -35,11 +35,11 @@ All the examples except cpp_baseline consist in a switch, if it pushed switch a 
 
 ### Wiring
 
-![Schema ESP8266 with RGB LED and push button switch](./image/Diagram.png)
+![Schema ESP8266 with RGB LED and push button switch](./images/example_wiring.png)
 
 ### Flowchart
 
-![Flow chart RGB LED and push button switch](./image/Flowchart.png)
+![Flow chart RGB LED and push button switch](./images/example_flowchart.png)
 
 ### Examples
 
@@ -72,7 +72,7 @@ The energy consumption of each example running in a ESP-8266 board for 12h is sh
 |cpp_17|8.4|✅|❌|❌|❌|2704|226|
 |cpp_17|15.2|✅|❌|❌|❌|2702|224|
 |cpp_20|15.2|❌|✅|❌|❌|2600|122|
-|cpp_23||15.2|❌|✅|✅|❌|2602|124|
+|cpp_23|15.2|❌|✅|✅|❌|2602|124|
 |cpp_modules|15.2|❌|✅|✅|✅|2713|235|
 
 
