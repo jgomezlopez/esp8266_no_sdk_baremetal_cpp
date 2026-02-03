@@ -3,10 +3,11 @@ A lightweight framework for experimenting with the ESP8266 architecture without 
 This project is designed for learning purposes — to understand the ESP8266 memory map, UART, interrupts, and peripheral handling at the bare-metal level.
 
 ## Requirements
-- Xtensa lx106 toolchain (gcc 15). For cpp_baseline or cpp_17 examples you can use [Link](https://dl.espressif.com/dl/xtensa-lx106-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz)
+- Xtensa lx106 toolchain (gcc 15). For cpp_baseline or cpp_17 examples you can use [Official Expressif toolchain gcc 8-4](https://dl.espressif.com/dl/xtensa-lx106-elf-gcc8_4_0-esp-2020r3-linux-amd64.tar.gz)
 - CMake 4.2.1. For cpp_baseline or cpp_17 examples you can use CMake 3.28.
 - Esptool.
-All the requirements can be found in the Podman container created in the repo [Link](https::/)
+
+All the requirements can be found in the Podman container created in the repo [Modern C++ toolchain for xtensa-lx106](https://github.com/jgomezlopez/esp8266_toolchain)
 
 ## Build
 `cd examples/<project_name>`
@@ -22,7 +23,7 @@ All the requirements can be found in the Podman container created in the repo [L
 
 ## All
 `cd examples/<project_name>`
-`./build.sh clean`
+`./build.sh clean build flash`
 
 ## NOTE
 - This is for experimenting with ESP8266's architecture so most of the functionality will not work.
@@ -43,7 +44,7 @@ All the examples except cpp_baseline consist in a switch, if it pushed switch a 
 
 ### Examples
 
-The features of examples shown in the following table, are created to validate the toolchain built using the repo [Link](https://)
+The features of examples shown in the following table, are created to validate the toolchain built using the repo [Modern C++ toolchain for xtensa-lx106](https://github.com/jgomezlopez/esp8266_toolchain)
 |Folder|Features|GCC version|C++ version|
 |------|--------|-----------|-----------|
 |cpp_baseline||8.4 and above|C++17|
