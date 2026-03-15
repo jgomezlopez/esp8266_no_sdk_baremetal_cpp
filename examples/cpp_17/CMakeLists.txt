@@ -31,15 +31,25 @@ file(GLOB_RECURSE CORE_S   ${CMAKE_SOURCE_DIR}/../../src/arch/*.S)
 # ============================================================
 # 4. EJEMPLO: SOLO main.cpp (igual que Makefile)
 # ============================================================
+add_library (core OBJECT ${CORE_C} ${CORE_S})
+
+add_library (hal)
+add_library (hal_timer)
+
+target_compile_options(hal PRIVATE -O3)
+target_compile_options(hal_timer PRIVATE -O0)
+
+target_sources (hal PRIVATE 
+		      	serial.cpp
+		       	switch.cpp
+		       	led.cpp)
+
+target_sources (hal_timer PRIVATE 
+		       	cpp_timer.cpp)
+
 if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "10.0")
     message(STATUS "Usando syscalls para GCC 8.x")
     add_executable(cpp_17
-        ${CORE_C}
-        ${CORE_S}
-        cpp_timer.cpp
-        serial.cpp
-        switch.cpp
-        led.cpp
         memory.cpp
         syscalls_gcc8_4.cpp
         main.cpp
@@ -47,12 +57,6 @@ if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS "10.0")
 else()
     message(STATUS "Usando syscalls para GCC 15.x")
     add_executable(cpp_17
-        ${CORE_C}
-        ${CORE_S}
-        cpp_timer.cpp
-        serial.cpp
-        switch.cpp
-        led.cpp
         memory.cpp
         syscalls.cpp
         main.cpp
@@ -70,9 +74,5 @@ target_link_options(cpp_17 PRIVATE
 # 6. LIBRERÍAS (igual que Makefile)
 # ============================================================
 
-target_link_libraries(cpp_17
-    c
-    gcc
-    m
-)
+target_link_libraries(cpp_17 core hal hal_timer c gcc m)
 

@@ -74,7 +74,8 @@ The energy consumption of each example running in a ESP-8266 board for 12h is sh
 |cpp_17|15.2|✅|❌|❌|❌|2702|224|
 |cpp_20|15.2|❌|✅|❌|❌|2600|122|
 |cpp_23|15.2|❌|✅|✅|❌|2602|124|
-|cpp_modules|15.2|❌|✅|✅|✅|2713|235|
+|cpp_modules (inlining)|15.2|❌|✅|✅|✅|2713|235|
+|cpp_modules (not inlining forced)|15.2|❌|✅|✅|✅|2603|125|
 
 
 

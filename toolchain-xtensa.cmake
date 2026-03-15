@@ -47,13 +47,19 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Flags C
 # ============================================================
 
-set(CMAKE_C_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -g -O0")
+#set(CMAKE_C_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -g -O0")
+set(CMAKE_C_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -O0 -fdata-sections -ffunction-sections -fno-omit-frame-pointer -fno-optimize-sibling-calls")
 
 # ============================================================
 # Flags C++
 # ============================================================
 
-set(CMAKE_CXX_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -g -O0 -fno-exceptions -fno-rtti")
+#set(CMAKE_CXX_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -g -O0 -fno-exceptions -fno-rtti")
+#set(CMAKE_CXX_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -O0 -fno-exceptions -fno-rtti")
+#set(CMAKE_CXX_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -g -O0 -fno-exceptions -fno-rtti -fmodule-implicit-inline")
+#set(CMAKE_CXX_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -O0 -fno-exceptions -fno-rtti -fmodule-implicit-inline")
+#set(CMAKE_CXX_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -O3 -fno-exceptions -fno-rtti -fdata-sections -ffunction-sections -fno-omit-frame-pointer -fno-optimize-sibling-calls")
+set(CMAKE_CXX_FLAGS "-ffreestanding -nostdlib -nostartfiles -Wall -Wextra -fno-exceptions -fno-rtti -fdata-sections -ffunction-sections -fno-omit-frame-pointer -fno-optimize-sibling-calls")
 
 # ============================================================
 # Flags del linker
